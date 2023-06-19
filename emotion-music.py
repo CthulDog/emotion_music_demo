@@ -7,11 +7,11 @@ import streamlit as st
 from PIL import Image, ImageOps
 
 # 加载模型
-emotion_model = tf.keras.models.load_model('D:/demo/emotion_model.h5')
-music_model = tf.keras.models.load_model('D:/demo/song-model.h5')
+emotion_model = tf.keras.models.load_model('emotion_model.h5')
+music_model = tf.keras.models.load_model('song-model.h5')
 
 # 读取DEAM数据集中的歌曲信息
-deam_data = pd.read_csv('D:/demo/deam_playlist.csv')
+deam_data = pd.read_csv('deam_playlist.csv')
 
 # 从图像中识别人脸情绪的函数
 def predict_emotion(img):
